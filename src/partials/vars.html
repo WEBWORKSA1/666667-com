@@ -1,0 +1,10 @@
+{%- include partials/root.html -%}
+{%- capture AD -%}<div class="ad-slot container" data-slot="inContent" aria-label="Advertisement">Advertisement</div>{%- endcapture -%}
+{%- capture AD_TOP -%}<div class="ad-slot container" data-slot="header" aria-label="Advertisement">Advertisement</div>{%- endcapture -%}
+{%- capture AD_SIDE -%}<div class="ad-slot container" data-slot="sidebar" aria-label="Advertisement">Advertisement</div>{%- endcapture -%}
+{%- assign UPDATED = site.time | date: "%Y-%m-%d" -%}
+{%- capture NUMCARDS -%}{%- for x in site.data.numbers -%}<a class="numcard{% if x.s < 0 %} neg{% endif %}" href="{{ ROOT }}numbers/{{ x.n }}.html" data-search="{{ x.n }} {{ x.zh }} {{ x.py }} {{ x.short | escape }} {{ x.sounds | escape }}" data-v="{{ x.v }}" data-cat="{{ x.cat }}"><b>{{ x.n }}</b><span class="zh">{{ x.zh }}</span><div class="small muted">{{ x.short | escape }}</div></a>{%- endfor -%}{%- endcapture -%}
+{%- capture DIGITCARDS -%}{%- for x in site.data.numbers -%}{%- if x.cat == "digit" -%}<a class="numcard{% if x.s < 0 %} neg{% endif %}" href="{{ ROOT }}numbers/{{ x.n }}.html"><b>{{ x.n }}</b><span class="zh">{{ x.zh }} · {{ x.py }}</span><div class="small muted">{{ x.short | escape }}</div></a>{%- endif -%}{%- endfor -%}{%- endcapture -%}
+{%- capture NUMTABLE -%}{%- for x in site.data.numbers -%}<tr><td class="num"><a href="{{ ROOT }}numbers/{{ x.n }}.html"><b>{{ x.n }}</b></a></td><td class="zh">{{ x.zh }}</td><td>{{ x.py }}</td><td>{{ x.sounds | escape }}</td><td><span class="tag{% if x.s > 0 %} good{% elsif x.s < 0 %} bad{% endif %}">{{ x.v }}</span></td></tr>{%- endfor -%}{%- endcapture -%}
+{%- assign glist = site.pages | where: "layout", "guide" | sort: "path" -%}
+{%- capture GUIDECARDS -%}{%- for g in glist -%}<a class="card card-link" href="{{ ROOT }}{{ g.url | remove_first: '/' }}"><span class="tag">{{ g.kicker }}</span><h3 style="margin-top:10px">{{ g.h1 }}</h3><p class="muted small">{{ g.description | escape }}</p><span class="small">{{ g.mins }} min read →</span></a>{%- endfor -%}{%- endcapture -%}

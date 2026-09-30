@@ -1,0 +1,38 @@
+# 666667.com — GitHub Pages (Jekyll) configuration. No local build needed:
+# GitHub Pages renders the layouts in _layouts/ and the partials in src/partials/.
+title: "666667"
+url: "https://666667.com"
+data_dir: src
+includes_dir: src
+plugins:
+  - jekyll-sitemap
+exclude:
+  - README.md
+  - RESEARCH.md
+  - BUILD-PROMPT.md
+collections:
+  numbers:
+    output: true
+    permalink: /numbers/:name.html
+defaults:
+  - scope: { path: "", type: numbers }
+    values: { layout: number, tools: true, active: numbers.html }
+  - scope: { path: "guides" }
+    values: { layout: guide, active: guides.html }
+  - scope: { path: "src" }
+    values: { sitemap: false }
+interest_url: "https://web.works/contact"
+nav:
+  - { u: index.html, n: Home }
+  - { u: tools.html, n: Tools }
+  - { u: numbers.html, n: Numbers }
+  - { u: guides.html, n: Guides }
+  - { u: videos.html, n: Videos }
+  - { u: domains.html, n: Domains }
+more:
+  - { u: contests.html, n: "Contests & Prizes" }
+  - { u: donate.html, n: Support Us }
+  - { u: careers.html, n: "Careers & Talent" }
+  - { u: advertise.html, n: "Advertise & Sponsor" }
+  - { u: about.html, n: About }
+  - { u: contact.html, n: Contact }

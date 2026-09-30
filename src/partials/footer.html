@@ -1,0 +1,47 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <a class="brand" href="{{ ROOT }}index.html" style="color:#fff">{% include partials/logo.html %}<span>66666<b>7</b></span></a>
+        <p style="margin-top:12px">六六六六六七 — “smooth, smooth, smooth… and rise.” The friendly global guide to Chinese lucky numbers, number slang and number-smart business.</p>
+        <form data-form="Newsletter" data-ok="You're in! Watch your inbox for the Number of the Week." novalidate>
+          <label class="sr" for="nl-email">Email</label>
+          <div class="row"><input id="nl-email" name="email" type="email" required placeholder="Your email — Number of the Week"><button class="btn btn-gold btn-sm" type="submit">Subscribe</button></div>
+          <div class="hp"><input name="_honey" tabindex="-1" autocomplete="off"></div>
+          <p class="form-status small" aria-live="polite"></p>
+        </form>
+      </div>
+      <div><h4>Explore</h4><ul><li><a href="{{ ROOT }}tools.html">Free Tools</a></li><li><a href="{{ ROOT }}numbers.html">Number Dictionary</a></li><li><a href="{{ ROOT }}guides.html">Guides</a></li><li><a href="{{ ROOT }}videos.html">Videos</a></li><li><a href="{{ ROOT }}domains.html">Numeric Domains</a></li></ul></div>
+      <div><h4>Work with us</h4><ul><li><a href="{{ ROOT }}services.html#audit">Free Business Audit</a></li><li><a href="{{ ROOT }}advertise.html">Advertise / Sponsor</a></li><li><a href="{{ ROOT }}careers.html">Careers &amp; Talent</a></li><li><a href="{{ ROOT }}contests.html">Contests &amp; Prizes</a></li><li><a href="{{ ROOT }}donate.html">Support Us</a></li></ul></div>
+      <div><h4>Company</h4><ul><li><a href="{{ ROOT }}about.html">About</a></li><li><a href="{{ ROOT }}contact.html">Contact</a></li><li><a href="{{ site.interest_url }}" target="_blank" rel="noopener">Buy / partner on this domain</a></li></ul></div>
+      <div><h4>Legal</h4><ul><li><a href="{{ ROOT }}legal.html#trademark">Trademark &amp; Copyright</a></li><li><a href="{{ ROOT }}privacy.html">Privacy Policy</a></li><li><a href="{{ ROOT }}terms.html">Terms of Use</a></li><li><a href="{{ ROOT }}legal.html#disclaimer">Disclaimer</a></li><li><a href="{{ ROOT }}legal.html#ads">Ads &amp; Affiliate Disclosure</a></li></ul></div>
+    </div>
+    <div class="legal-note">
+      <p><b>Trademark &amp; copyright notice:</b> “666667” is used on this website solely as a descriptive domain name and numeral. No claim of exclusive rights is made in the number itself, and this site is not affiliated with, endorsed by, or connected to any company, product, app, lottery, or organisation that may use the same or a similar number. All third-party names, logos and videos belong to their respective owners and are used for identification, commentary or embedding under the owners' platform terms. Original text, tools and design © <span data-year></span> 666667.com. All rights reserved.</p>
+      <p>Cultural content is for education and entertainment. Lucky scores and value estimates are not financial, legal, or investment advice. This site may show ads and earn from affiliate links.</p>
+    </div>
+  </div>
+</footer>
+<a class="btn btn-primary btn-block sticky-cta" href="{{ ROOT }}services.html#audit">Free China-market number audit →</a>
+<aside class="slidein" aria-label="Free cheat sheet">
+  <button class="x" aria-label="Close">×</button>
+  <span class="eyebrow">Free cheat sheet</span>
+  <h3 style="margin-bottom:6px">50 lucky &amp; unlucky numbers for business</h3>
+  <p class="small muted">Prices, phone numbers, floors, gift amounts — the one-page guide used by marketers selling to Chinese-speaking customers.</p>
+  <form data-form="Lead magnet - cheat sheet" data-ok="Sent! Check your inbox within 24 hours." novalidate>
+    <label class="sr" for="lm-email">Email</label>
+    <input id="lm-email" name="email" type="email" required placeholder="you@company.com" style="margin-bottom:8px">
+    <input type="hidden" name="lead_magnet" value="50 lucky numbers cheat sheet">
+    <div class="hp"><input name="_honey" tabindex="-1" autocomplete="off"></div>
+    <button class="btn btn-primary btn-block" type="submit">Email me the cheat sheet</button>
+    <p class="form-status small" aria-live="polite"></p>
+  </form>
+</aside>
+<div class="cookie" role="dialog" aria-label="Cookie notice">
+  <p style="margin:0 0 10px">We use cookies for analytics and, where enabled, ads (Google AdSense) to keep this site free. See our <a href="{{ ROOT }}privacy.html">Privacy Policy</a>.</p>
+  <div class="row"><button class="btn btn-primary btn-sm" data-v="all">Accept</button><button class="btn btn-ghost btn-sm" data-v="essential">Essential only</button></div>
+</div>
+<script src="{{ ROOT }}assets/js/config.js"></script>
+<script src="{{ ROOT }}assets/js/data.js"></script>
+<script src="{{ ROOT }}assets/js/app.js" defer></script>
+{% if page.tools %}<script src="{{ ROOT }}assets/js/tools.js" defer></script>{% endif %}

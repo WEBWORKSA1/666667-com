@@ -1,0 +1,10 @@
+---
+layout: default
+---
+<section style="padding-top:36px"><div class="container article">
+<nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="../guides.html">Guides</a> › {{ page.h1 | escape }}</nav>
+<span class="eyebrow">{{ page.kicker | default: "Guide" }}</span><h1>{{ page.h1 }}</h1>
+<p class="byline">By the 666667 Editorial Team · Updated {{ site.time | date: "%Y-%m-%d" }} · {{ page.mins | default: 6 }} min read · <a href="#" data-share>Share</a></p>
+{{ content }}
+<div class="cta-band" style="margin:40px 0"><div><h2>Turn numbers into revenue</h2><p>Get a free review of your prices, phone numbers, brand name and launch date for Chinese-speaking markets.</p></div><div><a class="btn btn-gold btn-block" href="../services.html?type=business#audit">Request free audit</a></div></div>
+</div></section>

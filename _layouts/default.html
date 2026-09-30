@@ -1,0 +1,64 @@
+{%- include partials/root.html -%}
+{%- if page.collection == "numbers" -%}
+{%- assign x = site.data.numbers | where: "n", page.n | first -%}
+{%- capture ptitle -%}{{ x.n }} Meaning in Chinese ({{ x.zh }}, {{ x.py }}) — Lucky or Not? | 666667{%- endcapture -%}
+{%- capture pdesc -%}What does {{ x.n }} mean in Chinese? {{ x.short }}. Pronunciation, origin, usage, FAQs and a free lucky-number checker.{%- endcapture -%}
+{%- else -%}
+{%- assign ptitle = page.title -%}{%- assign pdesc = page.description -%}
+{%- endif -%}
+{%- assign purl = page.url | replace: "/index.html", "/" -%}
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+{% if page.url == "/404.html" %}<script>document.write('<base href="'+(location.hostname.slice(-10)==='github.io'?'/666667-com/':'/')+'">')</script>
+{% endif %}<title>{{ ptitle | escape }}</title>
+<meta name="description" content="{{ pdesc | escape }}">
+<link rel="canonical" href="{{ site.url }}{{ purl }}">
+<meta name="robots" content="{{ page.robots | default: 'index,follow,max-image-preview:large' }}">
+<meta name="theme-color" content="#c8102e">
+<meta property="og:type" content="{% if page.layout == 'guide' or page.collection == 'numbers' %}article{% else %}website{% endif %}">
+<meta property="og:site_name" content="666667">
+<meta property="og:title" content="{{ ptitle | escape }}">
+<meta property="og:description" content="{{ pdesc | escape }}">
+<meta property="og:url" content="{{ site.url }}{{ purl }}">
+<meta property="og:image" content="{{ site.url }}/assets/img/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="{{ ROOT }}assets/img/logo.svg" type="image/svg+xml">
+<link rel="manifest" href="{{ ROOT }}site.webmanifest">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;700&family=Noto+Sans+SC:wght@400;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="{{ ROOT }}assets/css/style.css">
+<script>try{var t=localStorage.getItem('theme');if(t)document.documentElement.setAttribute('data-theme',t)}catch(e){}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebSite","name":"666667","url":"{{ site.url }}/","description":"Chinese lucky numbers, number slang and free lucky-number tools."}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"666667","url":"{{ site.url }}/","logo":"{{ site.url }}/assets/img/logo.svg"}</script>
+{%- if page.collection == "numbers" %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":{{ "What does " | append: x.n | append: " mean in Chinese?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ x.n | append: " (" | append: x.zh | append: ", " | append: x.py | append: ") is associated with " | append: x.sounds | append: ". " | append: x.short | append: "." | jsonify }}}},{"@type":"Question","name":{{ "How should businesses use " | append: x.n | append: "?" | jsonify }},"acceptedAnswer":{"@type":"Answer","text":{{ x.use | jsonify }}}}]}</script>
+{%- endif %}
+{%- if page.layout == "guide" %}
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":{{ page.h1 | jsonify }},"description":{{ page.description | jsonify }},"dateModified":"{{ site.time | date: '%Y-%m-%d' }}","author":{"@type":"Organization","name":"666667 Editorial Team"},"publisher":{"@type":"Organization","name":"666667"}}</script>
+{%- endif %}
+</head>
+<body data-root="{{ ROOT }}">
+<a class="skip" href="#main">Skip to content</a>
+<div class="topbar" role="note">Contact, if you are interested in this <a href="{{ site.interest_url }}" target="_blank" rel="noopener">website / domain name / Sponsorship / Advertisement / Partnership</a> →</div>
+<header class="site-header">
+  <div class="container nav">
+    <a class="brand" href="{{ ROOT }}index.html" aria-label="666667 home">{% include partials/logo.html %}<span>66666<b>7</b></span></a>
+    <button class="icon-btn burger" aria-label="Open menu" aria-expanded="false">☰</button>
+    <ul class="menu">
+      {% for i in site.nav %}<li><a href="{{ ROOT }}{{ i.u }}"{% if i.u == act %} aria-current="page"{% endif %}>{{ i.n }}</a></li>{% endfor %}
+      <li class="has-sub"><button class="linkish" aria-expanded="false" aria-haspopup="true">More ▾</button><ul class="sub">{% for i in site.more %}<li><a href="{{ ROOT }}{{ i.u }}"{% if i.u == act %} aria-current="page"{% endif %}>{{ i.n }}</a></li>{% endfor %}</ul></li>
+      <li><a class="btn btn-primary btn-sm" style="color:#fff" href="{{ ROOT }}services.html#audit">Free Audit</a></li>
+      <li><button class="icon-btn theme" aria-label="Toggle dark mode" title="Toggle dark mode">◐</button></li>
+    </ul>
+  </div>
+</header>
+<main id="main">
+{{ content }}
+</main>
+{% include partials/footer.html %}
+</body>
+</html>

@@ -1,0 +1,5 @@
+{%- assign segs = page.url | split: "/" -%}
+{%- if segs.size > 2 -%}{%- assign ROOT = "../" -%}{%- else -%}{%- assign ROOT = "" -%}{%- endif -%}
+{%- assign pu = page.url | remove_first: "/" -%}
+{%- if pu == "" -%}{%- assign pu = "index.html" -%}{%- endif -%}
+{%- assign act = page.active | default: pu -%}

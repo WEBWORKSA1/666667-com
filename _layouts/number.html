@@ -1,0 +1,43 @@
+---
+layout: default
+---
+{%- assign x = site.data.numbers | where: "n", page.n | first -%}
+{%- assign UPDATED = site.time | date: "%Y-%m-%d" -%}
+{%- if x.v == "lucky" -%}{%- assign verdict = "good" -%}{%- assign isit = "Yes. " | append: x.n | append: " is generally considered lucky in Chinese culture." -%}
+{%- elsif x.v == "unlucky" -%}{%- assign verdict = "bad" -%}{%- assign isit = "No. " | append: x.n | append: " is generally considered unlucky or offensive and is best avoided." -%}
+{%- elsif x.v == "mixed" -%}{%- assign verdict = "" -%}{%- assign isit = "It depends on context. " | append: x.n | append: " has both positive and negative readings." -%}
+{%- elsif x.v == "slang" -%}{%- assign verdict = "" -%}{%- assign isit = x.n | append: " is mainly internet slang rather than a luck number." -%}
+{%- else -%}{%- assign verdict = "" -%}{%- assign isit = x.n | append: " is broadly neutral." -%}{%- endif -%}
+<section style="padding-top:36px">
+<div class="container article">
+  <nav class="breadcrumbs" aria-label="Breadcrumb"><a href="../index.html">Home</a> › <a href="../numbers.html">Numbers</a> › {{ x.n }}</nav>
+  <span class="eyebrow">Chinese number meaning</span>
+  <h1><span class="num" style="color:var(--red)">{{ x.n }}</span> <span class="zh">{{ x.zh }}</span> — {{ x.short | escape }}</h1>
+  <p class="byline">By the 666667 Editorial Team · Updated {{ UPDATED }} · <a href="#" data-share>Share</a></p>
+  <div class="quick"><b>Quick answer:</b> {{ x.n }} is read <b>{{ x.py }}</b> and associated with <b>{{ x.sounds | escape }}</b>. Verdict: <span class="tag {{ verdict }}">{{ x.v }}</span></div>
+  <div class="table-wrap"><table>
+    <tr><th>Number</th><td class="num">{{ x.n }}</td></tr><tr><th>Chinese</th><td class="zh">{{ x.zh }}</td></tr>
+    <tr><th>Pinyin</th><td>{{ x.py }}</td></tr><tr><th>Sounds like / means</th><td>{{ x.sounds | escape }}</td></tr>
+    <tr><th>Luck rating</th><td>{{ x.v | capitalize }} ({% if x.s > 0 %}+{% endif %}{{ x.s }})</td></tr></table></div>
+  <h2>Meaning and origin</h2>
+  <p>{{ x.body | escape }}</p>
+  <div class="ad-slot container" data-slot="inContent" aria-label="Advertisement">Advertisement</div>
+  <h2>How it's used</h2>
+  <p>{{ x.use | escape }}</p>
+  <div class="tool" data-checker data-autoload style="margin:24px 0">
+    <h3>Check any number that contains {{ x.n }}</h3>
+    <form class="row"><label class="sr" for="c-{{ x.n }}">Number</label><input id="c-{{ x.n }}" class="big-input" inputmode="numeric" maxlength="40" value="{{ x.n }}" placeholder="Enter any number"><button class="btn btn-primary" type="submit">Get lucky score</button></form>
+    <div class="result" aria-live="polite"></div>
+  </div>
+  <h2>FAQ</h2>
+  <details><summary>What does {{ x.n }} mean in Chinese?</summary><p>{{ x.n }} ({{ x.zh }}, {{ x.py }}) is associated with {{ x.sounds | escape }}. {{ x.short | escape }}.</p></details>
+  <details><summary>Is {{ x.n }} a lucky number?</summary><p>{{ isit }}</p></details>
+  <details><summary>How should businesses use {{ x.n }}?</summary><p>{{ x.use | escape }}</p></details>
+  <div class="cta-band" style="margin:36px 0">
+    <div><h2>Selling to Chinese-speaking customers?</h2><p>We'll review your prices, phone numbers, address and brand name for lucky and unlucky numbers — free, within 48 hours.</p></div>
+    <div><a class="btn btn-gold btn-block" href="../services.html?type=business#audit">Get my free audit</a></div>
+  </div>
+  <h2>Related numbers</h2>
+  <div class="numgrid">{%- for r in x.rel -%}{%- assign y = site.data.numbers | where: "n", r | first -%}{%- if y -%}<a class="numcard{% if y.s < 0 %} neg{% endif %}" href="{{ y.n }}.html"><b>{{ y.n }}</b><span class="zh">{{ y.zh }}</span><div class="small muted">{{ y.short | escape }}</div></a>{%- endif -%}{%- endfor -%}</div>
+</div>
+</section>
