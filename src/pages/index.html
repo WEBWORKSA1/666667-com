@@ -1,0 +1,137 @@
+<!--META {"title":"666667 — Chinese Lucky Numbers, Number Slang & Free Lucky Number Checker","desc":"What do Chinese numbers mean? Check the luck of any phone number, price, licence plate or domain in seconds. Meanings of 6, 8, 4, 520, 666, 1314 and more — plus free business number audits.","tools":true,"schema":[{"@context":"https://schema.org","@type":"WebApplication","name":"Chinese Lucky Number Checker","url":"https://666667.com/tools.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}]} -->
+<section class="hero">
+  <div class="container hero-grid top">
+    <div>
+      <span class="eyebrow">六六六六六七 · liù liù liù liù liù qī</span>
+      <h1>Every number tells a story. <span class="accent">Find out if yours is lucky.</span></h1>
+      <p class="lead">The global guide to Chinese lucky numbers, number slang and number-smart business. Check any phone number, price, plate, address or domain — free, in one second.</p>
+      <div class="row" style="max-width:520px">
+        <a class="btn btn-primary" href="#checker">Check a number</a>
+        <a class="btn btn-ghost" href="{{ROOT}}services.html#audit">Free business audit</a>
+      </div>
+      <div class="stats">
+        <div><b class="num">1.4B+</b><span class="small muted">people read numbers this way</span></div>
+        <div><b class="num">40</b><span class="small muted">numbers decoded (and growing)</span></div>
+        <div><b class="num">5</b><span class="small muted">free interactive tools</span></div>
+      </div>
+    </div>
+    <div class="tool" id="checker" data-checker data-autoload>
+      <h2 style="font-size:1.35rem">Lucky Number Checker</h2>
+      <div class="segmented" role="group" aria-label="Number type">
+        <button type="button" data-mode="general" aria-pressed="true" data-ph="Enter any number">Any</button>
+        <button type="button" data-mode="phone" aria-pressed="false" data-ph="Phone number">Phone</button>
+        <button type="button" data-mode="price" aria-pressed="false" data-ph="Price, e.g. 1688">Price</button>
+        <button type="button" data-mode="plate" aria-pressed="false" data-ph="Plate digits">Plate</button>
+        <button type="button" data-mode="domain" aria-pressed="false" data-ph="Numeric domain, e.g. 888168">Domain</button>
+        <button type="button" data-mode="date" aria-pressed="false">Date</button>
+      </div>
+      <form><label class="sr" for="hero-num">Number to check</label>
+        <input id="hero-num" class="big-input" inputmode="numeric" maxlength="40" placeholder="Enter any number" autocomplete="off">
+        <button class="btn btn-primary btn-block" type="submit" style="margin-top:10px">Get my lucky score</button>
+      </form>
+      <div class="chips" style="margin-top:12px"><span class="small muted">Try:</span>
+        <button class="chip" type="button" data-try="666667">666667</button><button class="chip" type="button" data-try="888">888</button><button class="chip" type="button" data-try="520">520</button><button class="chip" type="button" data-try="1314">1314</button><button class="chip" type="button" data-try="4444">4444</button><button class="chip" type="button" data-try="168">168</button>
+      </div>
+      <div class="result" aria-live="polite"></div>
+    </div>
+  </div>
+</section>
+
+{{AD_TOP}}
+
+<section>
+  <div class="container">
+    <span class="eyebrow">The 10 digits</span>
+    <h2>What each number means in Chinese</h2>
+    <p class="lead">Chinese has many words that sound alike, so digits “borrow” the meaning of words they sound like. 8 sounds like “prosper”, 4 like “death”, 6 like “smooth”.</p>
+    <div class="numgrid" style="margin-top:24px">{{DIGITCARDS}}</div>
+    <p class="center" style="margin-top:22px"><a class="btn btn-ghost" href="{{ROOT}}numbers.html">See all combinations & slang →</a></p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <div class="grid g2" style="align-items:center">
+      <div>
+        <span class="eyebrow">Why “666667”?</span>
+        <h2>Smooth, smooth, smooth, smooth, smooth — <span style="color:var(--red)">then rise.</span></h2>
+        <p>In Chinese, <b>6 (六, liù)</b> sounds like <b>溜 / 流</b> — smooth, flowing, skilful. Online, <b>666</b> is how hundreds of millions of people say “awesome, well played”. <b>7 (七, qī)</b> echoes <b>起 (qǐ, “rise”)</b>. So 666667 reads like a wish: <i>everything flows… and then takes off.</i></p>
+        <p>Bonus trivia: 666667 is a <b>prime number</b>, and 0.666667 is 2/3 rounded to six decimals.</p>
+        <a class="btn btn-primary" href="{{ROOT}}guides/what-does-666667-mean.html">Read the full story</a>
+      </div>
+      <div class="card" style="text-align:center">
+        <div class="num" style="font-size:clamp(3rem,10vw,5.4rem);font-weight:800;letter-spacing:.02em;color:var(--red)">66666<span style="color:var(--gold)">7</span></div>
+        <div class="zh" style="font-size:1.4rem">溜 溜 溜 溜 溜 <b style="color:var(--gold)">起</b></div>
+        <p class="muted small" style="margin-top:10px">smooth × 5 → rise</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <span class="eyebrow">Free tools</span>
+    <h2>Number tools people actually use</h2>
+    <div class="grid g3" style="margin-top:22px">
+      <a class="card card-link" href="{{ROOT}}tools.html#checker"><h3>🔢 Lucky Number Checker</h3><p class="muted">Score any phone number, plate, address or code 0–100 with a digit-by-digit breakdown.</p></a>
+      <a class="card card-link" href="{{ROOT}}tools.html#price"><h3>💰 Lucky Price Generator</h3><p class="muted">Turn 1,000 into 988 or 1,088. Price like the top retailers in Chinese-speaking markets.</p></a>
+      <a class="card card-link" href="{{ROOT}}tools.html#zodiac"><h3>🐉 Chinese Zodiac Finder</h3><p class="muted">Your animal, element and commonly cited lucky numbers from your birth year.</p></a>
+      <a class="card card-link" href="{{ROOT}}tools.html#domain"><h3>🌐 Numeric Domain Valuator</h3><p class="muted">Indicative value range for 2–12 digit domains, using patterns Chinese buyers pay for.</p></a>
+      <a class="card card-link" href="{{ROOT}}tools.html#generator"><h3>🎲 Lucky Number Generator</h3><p class="muted">Generate high-scoring number endings, codes and PINs without a single 4.</p></a>
+      <a class="card card-link" href="{{ROOT}}numbers.html"><h3>📖 Number & Slang Dictionary</h3><p class="muted">520, 1314, 666, 88, 250, 748… what they mean and when to avoid them.</p></a>
+    </div>
+  </div>
+</section>
+
+{{AD}}
+
+<section class="section-alt" id="audit-teaser">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <span class="eyebrow" style="color:#ffd9de">For businesses</span>
+        <h2>Are your numbers costing you Chinese-speaking customers?</h2>
+        <p>A single “4” in a price, a floor number or a phone number can quietly hurt conversion with 1.4 billion+ Chinese speakers — including diaspora shoppers in Toronto, Vancouver, Sydney, London, Singapore and the Bay Area. We review your prices, phone numbers, address, launch date and brand name — free.</p>
+        <div class="trust" style="color:#ffe9ec"><span>Reply in 48 hours</span><span>No obligation</span><span>Human review</span></div>
+      </div>
+      <div><a class="btn btn-gold btn-block" href="{{ROOT}}services.html?type=business#audit">Get my free number audit</a><p class="small" style="margin-top:10px;color:#ffe9ec">Also for real estate, retail, restaurants, e-commerce, auto dealers and event planners.</p></div>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <div class="row" style="align-items:end;justify-content:space-between">
+      <div><span class="eyebrow">Watch</span><h2>Lucky numbers, explained on video</h2></div>
+      <a class="btn btn-ghost btn-sm" style="flex:0 0 auto" href="{{ROOT}}videos.html">All videos →</a>
+    </div>
+    <div class="grid g3" data-videos="3" style="margin-top:18px"></div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container">
+    <span class="eyebrow">Guides</span>
+    <h2>Popular guides</h2>
+    <div class="grid g3" style="margin-top:18px">{{GUIDECARDS}}</div>
+  </div>
+</section>
+
+<section>
+  <div class="container grid g3">
+    <div class="card"><span class="eyebrow">Win</span><h3>🏆 Monthly contest</h3><p class="muted">Share your luckiest number story — plate, phone, wedding date — and win from a US$168 prize pool.</p><a href="{{ROOT}}contests.html">Enter this month →</a></div>
+    <div class="card"><span class="eyebrow">Support</span><h3>❤️ Keep 666667 free</h3><p class="muted">Donations fund new tools, translations, videos, contests and prizes. Pick a lucky amount: 8, 18, 88.</p><a href="{{ROOT}}donate.html">Support us →</a></div>
+    <div class="card"><span class="eyebrow">Join</span><h3>✍️ We're hiring talent</h3><p class="muted">Writers, translators, video editors, cultural experts and developers — remote, flexible.</p><a href="{{ROOT}}careers.html">See open roles →</a></div>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container article">
+    <span class="eyebrow">FAQ</span>
+    <h2>Common questions</h2>
+    <details><summary>Why are numbers lucky or unlucky in Chinese culture?</summary><p>Mandarin and Cantonese have many homophones. A number “inherits” the meaning of a word it sounds like: 8 (bā) ≈ 发 (fā, prosper), 4 (sì) ≈ 死 (sǐ, death), 9 (jiǔ) ≈ 久 (jiǔ, long-lasting), 6 (liù) ≈ 溜 (liū, smooth).</p></details>
+    <details><summary>What is the luckiest number in China?</summary><p>8 is widely considered the luckiest, followed by 6 and 9. Combinations like 168, 518, 888 and 1688 are especially popular for businesses.</p></details>
+    <details><summary>What does 666 mean in Chinese?</summary><p>Online, 666 (liù liù liù) means “awesome, well played, so smooth”. It is praise — the opposite of its Western association.</p></details>
+    <details><summary>Is the lucky score scientific?</summary><p>No. It is a cultural heuristic built from widely shared homophone meanings. It is useful for marketing and naming decisions, not for predicting outcomes.</p></details>
+  </div>
+</section>

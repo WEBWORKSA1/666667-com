@@ -1,0 +1,123 @@
+<!--META {"title":"Free Chinese Lucky Number Tools — Checker, Price Generator, Zodiac, Domain Valuator | 666667","desc":"Five free tools: score any phone number or price for Chinese luck, generate lucky prices, find your Chinese zodiac and lucky numbers, and estimate numeric domain value.","tools":true,"crumbs":[["","Home"],["tools.html","Tools"]],"schema":[{"@context":"https://schema.org","@type":"WebApplication","name":"666667 Lucky Number Tools","url":"https://666667.com/tools.html","applicationCategory":"UtilitiesApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}]} -->
+<section style="padding-top:40px">
+  <div class="container">
+    <nav class="breadcrumbs"><a href="{{ROOT}}index.html">Home</a> › Tools</nav>
+    <span class="eyebrow">Free · no sign-up</span>
+    <h1>Lucky number tools</h1>
+    <p class="lead">Built on the homophone meanings shared across Mandarin- and Cantonese-speaking communities. Jump to: <a href="#checker">Checker</a> · <a href="#price">Price generator</a> · <a href="#zodiac">Zodiac</a> · <a href="#domain">Domain valuator</a> · <a href="#generator">Generator</a></p>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container grid g2" style="align-items:start">
+    <div class="tool" id="checker" data-checker data-autoload>
+      <h2>🔢 Lucky Number Checker</h2>
+      <div class="segmented" role="group" aria-label="Number type">
+        <button type="button" data-mode="general" aria-pressed="true" data-ph="Enter any number">Any</button>
+        <button type="button" data-mode="phone" aria-pressed="false" data-ph="Phone number">Phone</button>
+        <button type="button" data-mode="price" aria-pressed="false" data-ph="Price">Price</button>
+        <button type="button" data-mode="plate" aria-pressed="false" data-ph="Licence plate digits">Plate</button>
+        <button type="button" data-mode="address" aria-pressed="false" data-ph="House / unit number">Address</button>
+        <button type="button" data-mode="domain" aria-pressed="false" data-ph="Numeric domain">Domain</button>
+        <button type="button" data-mode="date" aria-pressed="false">Date</button>
+      </div>
+      <form><label class="sr" for="t-num">Number</label><input id="t-num" class="big-input" inputmode="numeric" maxlength="40" placeholder="Enter any number" autocomplete="off">
+        <button class="btn btn-primary btn-block" type="submit" style="margin-top:10px">Get lucky score</button></form>
+      <div class="chips" style="margin-top:12px"><button class="chip" type="button" data-try="13888886666">13888886666</button><button class="chip" type="button" data-try="518">518</button><button class="chip" type="button" data-try="1414">1414</button><button class="chip" type="button" data-try="5201314">5201314</button></div>
+      <div class="result" aria-live="polite"></div>
+    </div>
+    <div>
+      <div class="card">
+        <h3>How the score works</h3>
+        <ol class="small">
+          <li>Each digit gets a cultural weight (8 = +4, 6 and 9 = +3, 2 = +2, 4 = −4…).</li>
+          <li>Known combinations (168, 518, 520, 1314, 748, 250…) add or subtract points.</li>
+          <li>Repeated lucky digits (888, 6666) earn a bonus; any 4 costs points.</li>
+          <li>The last digit counts extra for prices, plates and phone numbers.</li>
+        </ol>
+        <p class="small muted">Scores are a transparent heuristic for naming and marketing decisions — not fortune-telling or financial advice.</p>
+      </div>
+      {{AD_SIDE}}
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="price">
+  <div class="container grid g2" style="align-items:start">
+    <div class="tool">
+      <h2>💰 Lucky Price Generator</h2>
+      <form id="price-form">
+        <div class="row">
+          <div class="field" style="flex:0 0 110px"><label for="price-cur">Currency</label><select id="price-cur"><option>$</option><option>¥</option><option>HK$</option><option>S$</option><option>€</option><option>£</option><option>C$</option><option>A$</option></select></div>
+          <div class="field"><label for="price-in">Your price</label><input id="price-in" type="number" min="1" step="1" placeholder="e.g. 1450" required></div>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Suggest lucky prices</button>
+      </form>
+      <div class="result" id="price-out" aria-live="polite"></div>
+    </div>
+    <div>
+      <h3>Why lucky pricing works</h3>
+      <p>In Chinese-speaking retail, prices ending in 8 (发, prosper), 6 (smooth) and 9 (lasting) are the norm — and a 4 can feel ominous. For diaspora and cross-border shoppers, a culturally fluent price signals “this brand gets me”.</p>
+      <p><a href="{{ROOT}}guides/lucky-pricing-chinese-customers.html">Read the lucky pricing playbook →</a></p>
+    </div>
+  </div>
+</section>
+
+{{AD}}
+
+<section id="zodiac">
+  <div class="container grid g2" style="align-items:start">
+    <div class="tool">
+      <h2>🐉 Chinese Zodiac & Lucky Numbers</h2>
+      <form id="zodiac-form" class="row">
+        <div class="field"><label for="zodiac-year">Birth year</label><input id="zodiac-year" type="number" min="1850" max="2150" placeholder="e.g. 1988" required></div>
+        <div class="field" style="justify-content:flex-end"><button class="btn btn-primary" type="submit">Find my sign</button></div>
+      </form>
+      <div class="result" id="zodiac-out" aria-live="polite"></div>
+    </div>
+    <div>
+      <h3>The 12 animals</h3>
+      <p class="zh" style="font-size:1.6rem;letter-spacing:.2em">🐀🐂🐅🐇🐉🐍🐎🐐🐒🐓🐕🐖</p>
+      <p>Rat, Ox, Tiger, Rabbit, Dragon, Snake, Horse, Goat, Monkey, Rooster, Dog and Pig repeat in a 12-year cycle, combined with five elements (Wood, Fire, Earth, Metal, Water) into a 60-year cycle.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section-alt" id="domain">
+  <div class="container grid g2" style="align-items:start">
+    <div class="tool">
+      <h2>🌐 Numeric Domain Valuator</h2>
+      <form id="domain-form">
+        <div class="row">
+          <div class="field"><label for="domain-in">Digits</label><input id="domain-in" inputmode="numeric" maxlength="12" placeholder="e.g. 168888" required></div>
+          <div class="field" style="flex:0 0 130px"><label for="domain-tld">Extension</label><select id="domain-tld"><option value="com">.com</option><option value="cn">.cn</option><option value="net">.net</option><option value="com.cn">.com.cn</option><option value="ai">.ai</option><option value="io">.io</option><option value="co">.co</option><option value="org">.org</option><option value="other">other</option></select></div>
+        </div>
+        <button class="btn btn-primary btn-block" type="submit">Estimate value</button>
+      </form>
+      <div class="result" id="domain-out" aria-live="polite"></div>
+    </div>
+    <div>
+      <h3>Why numeric domains matter in China</h3>
+      <p>Numbers need no translation or pinyin, are easy to say across dialects and are fast to type — which is why brands like 163.com and 360.cn became household names, and why short numeric .coms trade at premiums.</p>
+      <p><a href="{{ROOT}}domains.html">Numeric domain hub: buy, sell & appraise →</a></p>
+    </div>
+  </div>
+</section>
+
+<section id="generator">
+  <div class="container grid g2" style="align-items:start">
+    <div class="tool">
+      <h2>🎲 Lucky Number Generator</h2>
+      <form id="gen-form" class="row">
+        <div class="field"><label for="gen-len">How many digits?</label><input id="gen-len" type="number" min="2" max="12" value="4"></div>
+        <div class="field" style="justify-content:flex-end"><button class="btn btn-primary" type="submit">Generate</button></div>
+      </form>
+      <div class="result" id="gen-out" aria-live="polite"></div>
+    </div>
+    <div class="card">
+      <h3>Want this on your website?</h3>
+      <p class="muted">We offer a free embeddable lucky-number widget for blogs, real-estate listings and dealership sites (with a link back to 666667).</p>
+      <a class="btn btn-ghost btn-sm" href="{{ROOT}}advertise.html?type=widget#media-kit">Request the widget</a>
+    </div>
+  </div>
+</section>
