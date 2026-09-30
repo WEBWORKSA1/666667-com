@@ -1,0 +1,76 @@
+<!--META {"title":"Support 666667 — Donate to Keep the Tools Free | 666667","desc":"Support free lucky-number tools, translations, videos, contests and prizes. One-time or monthly — pick a lucky amount like 8, 18, 88 or 168.","crumbs":[["","Home"],["donate.html","Support"]]} -->
+<section class="hero">
+  <div class="container">
+    <nav class="breadcrumbs"><a href="{{ROOT}}index.html">Home</a> › Support us</nav>
+    <span class="eyebrow">❤️ Community supported</span>
+    <h1>Help us keep <span class="accent">666667</span> free for everyone.</h1>
+    <p class="lead">Your support pays for hosting and operations, new tools and translations, promotion and marketing, hiring writers and video editors, and the prize pool for our monthly contests.</p>
+    <div data-goal style="max-width:620px;margin-top:18px"></div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="container">
+    <div class="grid g4">
+      <div class="card tier"><h3>Lucky Tea</h3><div class="amt">$8</div><p class="small muted">发 — a thank-you that fuels one new number page.</p></div>
+      <div class="card tier"><h3>Smooth Supporter</h3><div class="amt">$18</div><p class="small muted">要发 — funds a translated guide.</p></div>
+      <div class="card tier featured"><span class="tag">Most chosen</span><h3>Double Prosperity</h3><div class="amt">$88</div><p class="small muted">发发 — sponsors a video episode. Name in credits.</p></div>
+      <div class="card tier"><h3>Patron</h3><div class="amt">$168</div><p class="small muted">一路发 — funds a full monthly contest prize. Supporter wall + badge.</p></div>
+    </div>
+    <p class="small muted center" style="margin-top:10px">Monthly memberships ($6 / $18 / $66 per month) include an ad-free experience, early videos and a supporters' newsletter.</p>
+  </div>
+</section>
+
+<section class="section-alt">
+  <div class="container grid g2" style="align-items:start">
+    <div>
+      <h2>Give instantly</h2>
+      <p>Choose a secure payment platform below. Payments are processed by the provider — we never see your card details.</p>
+      <div class="row" style="max-width:520px">
+        <a class="btn btn-primary" data-pay="paypal" target="_blank" rel="noopener" hidden>PayPal</a>
+        <a class="btn btn-gold" data-pay="buymeacoffee" target="_blank" rel="noopener" hidden>Buy Me a Coffee</a>
+        <a class="btn btn-ghost" data-pay="kofi" target="_blank" rel="noopener" hidden>Ko-fi</a>
+        <a class="btn btn-ghost" data-pay="stripe" target="_blank" rel="noopener" hidden>Card (Stripe)</a>
+      </div>
+      <h3 style="margin-top:28px">Where the money goes</h3>
+      <div class="table-wrap"><table>
+        <tr><th>Operations & hosting</th><td class="num">25%</td></tr>
+        <tr><th>New tools, content & translation</th><td class="num">30%</td></tr>
+        <tr><th>Promotion & marketing</th><td class="num">15%</td></tr>
+        <tr><th>Hiring talent (writers, editors, devs)</th><td class="num">20%</td></tr>
+        <tr><th>Contests & prizes</th><td class="num">10%</td></tr>
+      </table></div>
+      <p class="small muted" style="margin-top:10px">Donations are voluntary gifts to support an independent website and are not tax-deductible unless stated otherwise. No goods or services are promised beyond listed perks.</p>
+    </div>
+    <form class="tool" data-form="DONATION PLEDGE" data-ok="Thank you! We'll email you a secure payment link and add you to the supporter wall (if you opted in)." novalidate>
+      <h3>Pledge or request a payment link</h3>
+      <p class="small muted">Prefer bank transfer, Interac, WeChat Pay, Alipay, UPI or an invoice for your company? Pledge here and we'll send the right secure link.</p>
+      <div class="segmented amount-pick" role="group" aria-label="Amount">
+        <button type="button" data-amt="8" aria-pressed="false">$8</button><button type="button" data-amt="18" aria-pressed="false">$18</button><button type="button" data-amt="88" aria-pressed="true">$88</button><button type="button" data-amt="168" aria-pressed="false">$168</button><button type="button" data-amt="888" aria-pressed="false">$888</button>
+      </div>
+      <div class="row">
+        <div class="field"><label for="dn-amt">Amount (USD)</label><input id="dn-amt" name="amount" type="number" min="1" value="88" required></div>
+        <div class="field"><label for="dn-freq">Frequency</label><select id="dn-freq" name="frequency"><option>One-time</option><option>Monthly</option><option>Yearly</option></select></div>
+      </div>
+      <div class="field"><label for="dn-use">Direct my gift to</label><select id="dn-use" name="designation"><option>Where it's needed most</option><option>Operations & hosting</option><option>Promotions & marketing</option><option>Hiring talent</option><option>Contests & prizes</option><option>New tools & translations</option></select></div>
+      <div class="field"><label for="dn-pay">Preferred payment method</label><select id="dn-pay" name="payment_method"><option>Card</option><option>PayPal</option><option>Bank transfer</option><option>Interac e-Transfer</option><option>WeChat Pay / Alipay</option><option>UPI</option><option>Company invoice</option></select></div>
+      <div class="row">
+        <div class="field"><label for="dn-name">Name</label><input id="dn-name" name="name" required></div>
+        <div class="field"><label for="dn-email">Email</label><input id="dn-email" name="email" type="email" required></div>
+      </div>
+      <div class="field"><label for="dn-msg">Message for the supporter wall (optional)</label><input id="dn-msg" name="wall_message" maxlength="140"></div>
+      <label class="small check"><input type="checkbox" name="show_on_wall" value="yes" style="width:auto"> Show my name on the supporter wall</label>
+      <div class="hp"><input name="_honey" tabindex="-1" autocomplete="off"></div>
+      <button class="btn btn-primary btn-block" type="submit">Pledge my support</button>
+      <p class="form-status" aria-live="polite"></p>
+    </form>
+  </div>
+</section>
+
+<section>
+  <div class="container">
+    <h2>Supporter wall</h2>
+    <p class="muted">Be the first name here. Supporters who opt in are listed with their message.</p>
+    <div class="chips"><span class="chip">🧧 Your name here</span><span class="chip">🧧 Early supporter spot</span><span class="chip">🧧 Founding patron</span></div>
+  </div>
+</section>
