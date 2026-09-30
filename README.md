@@ -8,20 +8,23 @@ A static website about Chinese lucky numbers, number slang and number-smart busi
 
 ## Structure
 ```
-index.html, tools.html, numbers.html, guides.html, videos.html, domains.html,
-services.html (lead gen), donate.html, contests.html, careers.html, advertise.html,
-about.html, contact.html, legal.html, privacy.html, terms.html, 404.html
-numbers/*.html      generated number pages (from src/numbers.json)
-guides/*.html       generated guides (from src/guides)
+_config.yml           Jekyll config (GitHub Pages builds the site automatically)
+_layouts/             default, guide and number page layouts
+_numbers/*.md         one tiny file per number page (rendered from src/numbers.json)
+*.html, guides/*.html page stubs (front matter + include of the page body)
+src/pages/*.html      page bodies        src/guides/*.html  guide bodies
+src/partials/         shared variables, footer, logo
+src/numbers.json      the number dictionary (40 entries)
 assets/css/style.css
 assets/js/config.js   edit this to go live (AdSense, GA4, form alias, payment links, videos)
 assets/js/app.js      nav, theme, forms, ads, videos, donations, countdown
 assets/js/tools.js    lucky score, price generator, zodiac, domain valuator, generator
-build.py              regenerates every page: python3 build.py
 ```
 
-## Edit and rebuild
-Edit `src/pages/*.html`, `src/guides/*.html` or `src/numbers.json`, then commit and push. The **Build site** GitHub Action runs `python3 build.py` and commits the generated pages. You can also run `python3 build.py` locally.
+## Edit
+- To change a page, edit its body in `src/pages/` or `src/guides/`.
+- To add a number, add an entry to `src/numbers.json` and a file `_numbers/<number>.md` containing `n: "<number>"` in its front matter.
+- Commit, and GitHub Pages rebuilds automatically.
 
 ## Go-live checklist
 1. **Forms:** submit any form once. The inbox receives a FormSubmit "Activate" email; click it. Optionally paste the random alias FormSubmit gives you into `formAlias` in `config.js`.
